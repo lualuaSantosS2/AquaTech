@@ -1,0 +1,4 @@
+Para fazer login na dash:
+
+login: email da sptech
+Senha: deve conter a palavra 'sptech', pelo menos um número e o simbolo '#'

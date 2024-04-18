@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon2.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Aqua Tech</h1>
+            <ul  class="navbar">
+                <li><a href="index.html">Inicial</a></li>
+                <li>Simulador</li>
+                <li>|</li>
+                <li><a href="login.html">Login</a></li>
+                <li>Cadastro</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="card-login">
+        <input type="text" placeholder="Login..." class="inputs" id="inputLogin"><BR>
+        <input type="password" placeholder="Senha..." class="inputs" id="inputSenha"><br>
+        <button class="btn-login" onclick="validarLogin()">ENTRAR</button>
+    </div>
+</body>
+</html>
+<script>
+    function validarLogin() {
+    const login = inputLogin.value;
+    const senha = inputSenha.value;
+
+    if (senha.includes('#') && senha.includes('sptech')) {
+        if (/[0-9]/.test(senha)) {
+            if (login.endsWith('@sptech.school')) {
+                window.location.assign("dashboard.html");
+            }else{
+                alert('Login incorreto tente novamente!');
+            }
+        }else{
+            alert('A senha deve conter números!');
+        }
+    }else{
+        alert("A senha deve conter '#' e 'sptech'!");
+    }
+}
+</script>
